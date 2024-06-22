@@ -24,3 +24,8 @@ public:
         return result;
     }
 };
+
+
+
+// Time Complexity -> O(n + m) , where where 'n' is the length of 'word1' and 'm' is the length of 'word2'
+// Space Complexity -> O(1)
