@@ -21,3 +21,27 @@ class Solution:
 # Space Complexity -> O(n)
 
 # ------------------------------------------------------------------------
+
+
+# ------------------------------- Approach - 2 ---------------------------
+
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        j = -1
+        for i in range(len(nums)):
+            if nums[i] == 0:
+                j = i
+                break
+        
+        if(j == -1): return
+
+        for i in range(j+1, len(nums)):
+            if nums[i] != 0:
+                nums[i], nums[j] = nums[j], nums[i]
+                j += 1
+
+
+# Time Complexity -> O(n)
+# Space Complexity -> O(1)
+
+# ------------------------------------------------------------------------
